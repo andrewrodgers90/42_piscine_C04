@@ -14,39 +14,24 @@
 
 void	ft_putnbr(int nb)
 {
-	char	num;
+	char	arr[10];
+	long	num;
+	int	i;
 
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
+	num = nb;
+	i = 0;
+	if (num == 0)
+		write(1, "0", 1);
+	if (num < 0)
 	{
 		write(1, "-", 1);
-		nb = -nb;
+		num *= -1;
 	}
-	if (nb > 9)
+	while (num > 0)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		arr[i++] = (num % 10) + 48;
+		num /= 10;
 	}
-	else
-	{
-		num = nb + '0';
-		write(1, &num, 1);
-	}
+	while (i > 0)
+		write(1, &arr[--i], 1);
 }
-/*
-int	main(void)
-{
-	char	nl;
-
-	nl = '\n';
-	ft_putnbr(42);
-	write(1, &nl, 1);
-	ft_putnbr(-42);
-	write(1, &nl, 1);
-	ft_putnbr(-2147483648);
-	return (0);
-} */
