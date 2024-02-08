@@ -12,8 +12,6 @@
 
 #include <unistd.h>
 
-int	ft_atoi(char *str);
-
 int	ft_atoi(char *str)
 {
 	int	i;
@@ -41,14 +39,3 @@ int	ft_atoi(char *str)
 		num = num * (-1);
 	return (num);
 }
-/*
-int	main(void)
-{
-	char	arr[] = "   +-+--1234asb567";
-
-	int mine;
-       	mine = ft_atoi(arr);
-
-	printf("Mine: %d", mine);
-	return (0);
-} */
