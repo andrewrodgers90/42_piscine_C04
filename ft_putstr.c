@@ -12,8 +12,6 @@
 
 #include <unistd.h>
 
-void	ft_putstr(char *str);
-
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -25,11 +23,3 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-/*
-int	main(void)
-{
-	char	arr[] = "You really know how to cut to the core of me, Baxter";
-
-	ft_putstr(arr);
-	return (0);
-} */
