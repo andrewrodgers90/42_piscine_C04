@@ -68,11 +68,3 @@ void	ft_putnbr_base(int nbr, char *base)
 			ft_putchar(base[num]);
 	}
 }
-
-int	main(void)
-{
-	char	*base = "0123456789ABCDEF";
-	int	nbr = 42;
-	ft_putnbr_base(nbr, base);
-	return (0);
-}
